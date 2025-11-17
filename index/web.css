@@ -1,0 +1,74 @@
+/* Variables */
+:root{
+  --accent:#2b8a78;
+  --bg:#fbfbfb;
+  --text:#222;
+  --muted:#666;
+  --card:#fff;
+  --radius:12px;
+  --container:1100px;
+  --gap:1.25rem;
+  --shadow:0 6px 18px rgba(17,17,17,0.08);
+  font-family:"Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+}
+
+/* Reset */
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);line-height:1.45; -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+
+/* Container */
+.container{width:90%;max-width:var(--container);margin:0 auto;padding:2rem 0;}
+
+/* Header */
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:40;}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between;}
+.logo{font-weight:700;font-size:1.125rem;color:var(--accent);text-decoration:none;}
+.main-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0;}
+.main-nav a{text-decoration:none;padding:.5rem .75rem;color:var(--text);border-radius:8px;}
+.main-nav a:hover,.main-nav a.active{background:rgba(43,138,120,0.08);color:var(--accent);}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.25rem;cursor:pointer;}
+
+/* Hero */
+.hero{height:100vh;position:relative;overflow:hidden;display:flex;justify-content:center;align-items:center;text-align:center;color:#0c0c0c;animation:fadeIn 1.6s ease-in-out;}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(252,251,251,0.45);z-index:1;}
+.hero video,.hero img{position:absolute;width:100%;height:100%;object-fit:cover;top:0;left:0;}
+.hero-content{position:relative;z-index:2;max-width:700px;animation:slideUp 1.3s ease-out;}
+.hero h1{font-size:3rem;margin-bottom:15px;}
+.accent{color:#1e1c14;font-weight:bold;}
+.hero p{margin-bottom:1.4rem;color:var(--muted);}
+.hero-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;}
+.btn{background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:10px;text-decoration:none;display:inline-block;cursor:pointer;}
+.btn-outline{background:transparent;border:1px solid rgba(43,138,120,0.14);color:var(--accent);}
+.small-link{font-size:.9rem;display:inline-block;margin-top:.5rem;}
+
+/* Highlights & Cards */
+.highlights{padding:60px 20px;animation:fadeIn 1.5s ease-out;}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:25px;}
+.card{background:white;border-radius:12px;box-shadow:0 5px 18px rgba(0,0,0,0.12);overflow:hidden;transition:transform .3s,box-shadow .3s;}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card:hover{transform:scale(1.04);box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+.card h3{margin:.75rem 1rem 0;}
+.card p{margin:.3rem 1rem 1rem;color:var(--muted);}
+
+/* About banner */
+.about-banner{margin-top:70px;padding:60px 20px;background:linear-gradient(to right,#8a2be2,#484648);color:white;text-align:center;border-radius:12px;animation:fadeInUp 1.4s ease;}
+.project-list{margin-top:15px;list-style:none;padding:0;}
+.project-list li{margin-bottom:6px;}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;background:#fff;margin-top:2rem;padding:1rem 0;}
+.footer-inner{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;gap:.5rem;}
+
+/* Scroll Top */
+.scroll-top{position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:0;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);cursor:pointer;display:none;}
+
+/* Animations */
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes slideUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+
+/* Responsiveness */
+@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr);}.hero h1{font-size:2rem;}}
+@media(max-width:640px){.grid-3{grid-template-columns:1fr;}.nav-toggle{display:inline-block;}.main-nav{display:none;}.container{padding:1rem;}}
+.main-nav.open{display:block;}

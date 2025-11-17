@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover Uganda — Home</title>
+  <meta name="description" content="Discover Uganda - travel, wildlife, culture and stunning landscapes." />
+ <link rel="stylesheet" href="web.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Discover Uganda</a>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active" data-key="nav_home">Home</a></li>
+        <li><a href="destination.html" data-key="nav_destinations">Destinations</a></li>
+        <li><a href="gallery.html" data-key="nav_gallery">Gallery</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+    <select id="languageSelect">
+      <option value="en" selected>English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="sw">Kiswahili</option>
+      <option value="zh">中文</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+</header>
+
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="uganda.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1 data-key="hero_title">Welcome to <span class="accent">Discover Uganda</span></h1>
+    <p data-key="hero_desc">Explore Uganda's wildlife, lakes, forests, mountains and cultural beauty. Discover why Uganda is called the Pearl of Africa.</p>
+    <div class="hero-actions">
+      <a href="destination.html" class="btn" data-key="btn_explore">Explore Destinations</a>
+      <a href="gallery.html" class="btn btn-outline" data-key="btn_gallery">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+<section class="highlights container">
+  <h2 data-key="highlights_title">Top Highlights of Uganda</h2>
+  <div class="grid-3">
+    <article class="card">
+      <img src="images.jpeg" alt="Murchison Falls" />
+      <h3 data-key="highlight1_title">Murchison Falls</h3>
+      <p data-key="highlight1_desc">The world's most powerful waterfall located along the Nile river.</p>
+      <a href="destination.html" class="small-link" data-key="highlight1_link">Learn more →</a>
+    </article>
+    <article class="card">
+      <img src="download.jpeg" alt="Bwindi Impenetrable Forest" />
+      <h3 data-key="highlight2_title">Bwindi Impenetrable Forest</h3>
+      <p data-key="highlight2_desc">Home to mountain gorillas — a life-changing trekking adventure.</p>
+      <a href="destination.html" class="small-link" data-key="highlight2_link">Learn more →</a>
+    </article>
+    <article class="card">
+      <img src="bunyonyi.jpeg" alt="Lake Bunyonyi" />
+      <h3 data-key="highlight3_title">Lake Bunyonyi</h3>
+      <p data-key="highlight3_desc">A peaceful lake surrounded by green hills. Great for relaxing & canoeing.</p>
+      <a href="destination.html" class="small-link" data-key="highlight3_link">Learn more →</a>
+    </article>
+  </div>
+</section>
+
+<section class="about-banner container">
+  <h2 data-key="about_title">About This Project</h2>
+  <p data-key="about_desc">This website is a student project showcasing Uganda's tourism, culture & wildlife. It demonstrates responsive design, animations, navigation systems & JavaScript features.</p>
+  <ul class="project-list">
+    <li><strong data-key="coursework_label">Coursework:</strong> Web Authoring / Website Development by group L</li>
+    <li><strong data-key="page-lebel">BY:</strong> NAME:KYOMUHENDO Judith;2025-B291-14056</li>
+  </ul>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Discover Uganda — Student Project</p>
+    <nav>
+      <ul class="footer-links">
+        <li><a href="index.html" data-key="nav_home">Home</a></li>
+        <li><a href="destination.html" data-key="nav_destinations">Destinations</a></li>
+        <li><a href="gallery.html" data-key="nav_gallery">Gallery</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top">↑</button>
+
+
+<script src="web.js"></script>
+
+
+
+</body>
+</html>
